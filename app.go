@@ -14,12 +14,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if msg == "" {
 		msg = ":( SIMPLE_MSG variable not defined"
 	}
-	fmt.Fprintf(w, "<h1>%s</h1>", msg)
+	fmt.Fprintf(w, "Welcome to BALA's Go Container %s", msg)
 }
 
 func main() {
 	flag.Parse()
 	log.Print("Simple app server started...")
 	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":3000", nil)
 }
