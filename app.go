@@ -21,5 +21,5 @@ func main() {
 	flag.Parse()
 	log.Print("Simple app server started...")
 	http.HandleFunc("/", handler)
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":8080", nil)
 }
